@@ -24,6 +24,11 @@ defmodule Deck do
 
   @doc """
     Checks if a deck contains a certain card
+
+  ## Examples
+      iex> deck = Deck.create_deck()
+      iex> Deck.contains?(deck, "Ace of Spades")
+      true
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
@@ -35,7 +40,7 @@ defmodule Deck do
     in the hand.
 
   ## Examples
-      iex> deck = Deck.create_deck
+      iex> deck = Deck.create_deck()
       iex> {hand, deck} = Deck.deal(deck, 1)
       iex> hand
       ["Ace of Spades"]
